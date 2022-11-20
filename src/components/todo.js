@@ -7,7 +7,7 @@ const getLocalData = () => {
 
   if (lists) {
     return JSON.parse(lists);
-  } else {
+  } else { 
     return [];
   }
 };
@@ -35,8 +35,9 @@ const Todo = () => {
       setInputData("");
       setIsEditItem(null);
       setToggleButton(false);
-    } else {
-      const myNewInputData = {
+      } 
+  else {
+      const myNewInputData = {  
         id: new Date().getTime().toString(),
         name: inputdata,
       };
@@ -55,7 +56,7 @@ const Todo = () => {
     setToggleButton(true);
   };
 
-  // how to delete items section
+  // how to delete items section 
   const deleteItem = (index) => {
     const updatedItems = items.filter((curElem) => {
       return curElem.id !== index;
